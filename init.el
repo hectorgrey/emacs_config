@@ -2,6 +2,7 @@
 
 (global-display-line-numbers-mode 1)
 
+(setq use-dialog-box nil)
 (setq inhibit-startup-message t)
 (tool-bar-mode -1)
 (tooltip-mode -1)
@@ -10,9 +11,21 @@
 (menu-bar-mode -1)
 (save-place-mode 1)
 
+(global-auto-revert-mode 1)
+(setq global-auto-revert-non-file-buffers t)
+
 (setq custom-file (locate-user-emacs-file "custom-vars.el"))
 (load custom-file 'noerror 'nomessage)
 
+;; Modus Configuration
+(setq modus-themes-bold-constructs t)
+(setq modus-themes-italic-constructs t)
+(setq modus-themes-mixed-fonts t)
+(setq modus-themes-headings
+      '((t . (variable-pitch rainbow 1.5))))
+(setq modus-themes-common-palette-overrides
+      '((border-mode-line-active bg-mode-line-active)
+	(border-mode-line-inactive bg-mode-line-inactive)))
 (load-theme 'modus-vivendi)
 
 (require 'package)
