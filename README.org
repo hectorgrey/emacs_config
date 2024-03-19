@@ -1,1 +1,5 @@
-#+INCLUDE: "./config.org"
+#+title: README
+#+author: hectorgrey
+
+This is my emacs configuration.  It is currently quite basic, but in future I plan to
+separate things out in such a way that this will be a decent learning tool.
