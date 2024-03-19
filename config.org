@@ -46,7 +46,6 @@ This is a basic configuration, to be separated out into multiple source blocks l
   (use-package evil
     :diminish
     :ensure t)
-  (evil-mode 1)
 
   (use-package ivy
     :diminish
