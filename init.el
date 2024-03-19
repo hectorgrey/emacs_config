@@ -41,8 +41,8 @@
 (evil-mode 1)
 
 (use-package ivy
-  :ensure t
   :diminish
+  :ensure t
   :bind (("C-s" . swiper)
 	 :map ivy-minibuffer-map
 	 ("TAB" . ivy-alt-done)
@@ -59,3 +59,9 @@
 	 ("C-j" . ivy-next-line)
 	 ("C-d" . ivy-reverse-i-search-kill)))
 (ivy-mode 1)
+
+(use-package which-key
+  :diminish
+  :ensure t)
+
+(which-key-mode 1)
