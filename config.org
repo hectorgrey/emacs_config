@@ -71,9 +71,9 @@ connections if not set up correctly.
 
 Evil Mode is a reimplementation of vim written in elisp - for those who like the features
 of emacs but prefer the modal editing of vim, this is an ideal compromise.  Currently,
-~~(evil-mode 1)~~ is commented out to allow the default emacs bindings - to enable Evil
-Mode on startup, uncomment that line.  To enable it within an emacs session, press ~~M-x~~
-and use the evil-mode command.  Use the same command again to disable it.
+~(evil-mode 1)~ is commented out to allow the default emacs bindings - to enable Evil Mode
+on startup, uncomment that line.  To enable it within an emacs session, press ~M-x~ and
+use the evil-mode command.  Use the same command again to disable it.
 
 #+begin_src elisp
   (use-package evil
@@ -112,8 +112,8 @@ such stuff.  It makes working with emacs significantly easier.
 ** Which-Key
 
 Which-Key is designed to help you get used to the many key bindings in emacs - after
-pressing ~~C-x~~, ~~C-h~~, ~~Esc~~, or ~~C-c~~, this package will display a popup
-displaying the various things you can press next and what they do.
+pressing ~C-x~, ~C-h~, ~Esc~, or ~C-c~, this package will display a popup displaying the
+various things you can press next and what they do.
 
 #+begin_src elisp
   (use-package which-key
