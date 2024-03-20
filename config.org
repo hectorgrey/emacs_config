@@ -180,4 +180,55 @@ Protocol functionality when programming.
 	:commands lsp-ivy-workspace-symbol)
 #+end_src
 
+*** Treesitter
 
+This is where the various treesitter grammars are located and installed.  The commented
+line installs all listed grammars; it is commented out to avoid all of the grammars being
+re-installed every time emacs launches.
+
+#+begin_src elisp
+  (setq treesit-language-source-alist
+		'((c "https://github.com/tree-sitter/tree-sitter-c")
+		  (cpp "https://github.com/tree-sitter/tree-sitter-cpp")
+		  (c-sharp "https://github.com/tree-sitter/tree-sitter-c-sharp")
+		  (html "https://github.com/tree-sitter/tree-sitter-html")
+		  (javascript "https://github.com/tree-sitter/tree-sitter-javascript")
+		  (css "https://github.com/tree-sitter/tree-sitter-css")
+		  (json "https://github.com/tree-sitter/tree-sitter-json")
+		  (rust "https://github.com/tree-sitter/tree-sitter-rust")))
+
+  ;(mapc #'treesit-install-language-grammar (mapcar #'car treesit-language-source-alist))
+#+end_src
+
+*** Languages
+
+**** C/C++
+
+#+begin_src elisp
+  (add-to-list 'major-mode-remap-alist '(c-mode . c-ts-mode))
+  (add-to-list 'major-mode-remap-alist '(c++-mode . c++-ts-mode))
+  (add-to-list 'major-mode-remap-alist '(c-or-c++-mode . c-or-c++-ts-mode))
+#+end_src
+
+**** C#
+
+#+begin_src elisp
+  (add-to-list 'major-mode-remap-alist '(csharp-mode . csharp-ts-mode))
+#+end_src
+
+**** JavaScript/JSON
+
+**** CSS
+
+**** HTML
+
+**** SH
+
+**** Rust
+
+#+begin_src elisp
+  (use-package rust-mode
+	:ensure t
+	:init
+	(setq rust-mode-treesitter-derive t))
+#+end_src
