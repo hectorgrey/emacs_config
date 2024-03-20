@@ -7,3 +7,5 @@
 /tramp
 /config.el
 /projects
+/.dap-breakpoints
+/.lsp-session-v1
