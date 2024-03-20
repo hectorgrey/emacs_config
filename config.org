@@ -134,3 +134,27 @@ various things you can press next and what they do.
     :ensure t)
   (which-key-mode 1)
 #+end_src
+
+** LSP
+
+These LSP plugins are designed to allow programmers to make use of Language Server
+Protocol functionality when programming.
+
+#+begin_src elisp
+  (use-package lsp-mode
+	:diminish
+	:ensure t
+	:init
+	(setq lsp-keymap-prefix "C-c l")
+	:hook (
+		   (lsp-mode . lsp-enable-which-key-integration))
+	:commands lsp)
+
+  (use-package lsp-ui
+	:diminish
+	:ensure t)
+
+  (use-package lsp-ivy
+	:diminish
+	:ensure t)
+#+end_src
