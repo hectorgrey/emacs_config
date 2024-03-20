@@ -152,11 +152,13 @@ Protocol functionality when programming.
 
   (use-package lsp-ui
 	:diminish
-	:ensure t)
+	:ensure t
+	:commands lsp-ui-mode)
 
   (use-package lsp-ivy
 	:diminish
-	:ensure t)
+	:ensure t
+	:commands lsp-ivy-workspace-symbol)
 #+end_src
 
 ** DAP
