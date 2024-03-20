@@ -135,7 +135,19 @@ various things you can press next and what they do.
   (which-key-mode 1)
 #+end_src
 
-** LSP
+** Programming
+
+*** DAP
+
+This plugins are to allow programmers to use DAP debugging functionality.
+
+#+begin_src elisp
+  (use-package dap-mode
+	:diminish
+	:ensure t)
+#+end_src
+
+*** LSP
 
 These LSP plugins are designed to allow programmers to make use of Language Server
 Protocol functionality when programming.
@@ -146,7 +158,14 @@ Protocol functionality when programming.
 	:ensure t
 	:init
 	(setq lsp-keymap-prefix "C-c l")
-	:hook (
+	:hook ((csharp-mode . lsp)
+		   (c-mode . lsp)
+		   (c++-mode . lsp)
+		   (js-mode . lsp)
+		   (json-mode . lsp)
+		   (html-mode . lsp)
+		   (css-mode . lsp)
+		   (sh-mode . lsp)
 		   (lsp-mode . lsp-enable-which-key-integration))
 	:commands lsp)
 
@@ -161,12 +180,4 @@ Protocol functionality when programming.
 	:commands lsp-ivy-workspace-symbol)
 #+end_src
 
-** DAP
 
-This plugins are to allow programmers to use DAP debugging functionality.
-
-#+begin_src elisp
-  (use-package dap-mode
-	:diminish
-	:ensure t)
-#+end_src
