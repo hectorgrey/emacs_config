@@ -158,3 +158,13 @@ Protocol functionality when programming.
 	:diminish
 	:ensure t)
 #+end_src
+
+** DAP
+
+This plugins are to allow programmers to use DAP debugging functionality.
+
+#+begin_src elisp
+  (use-package dap-mode
+	:diminish
+	:ensure t)
+#+end_src
