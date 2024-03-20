@@ -137,6 +137,15 @@ various things you can press next and what they do.
 
 ** Programming
 
+*** Completion
+
+#+begin_src elisp
+  (use-package company
+	:diminish
+	:ensure t)
+  (company-mode 1)
+#+end_src
+
 *** DAP
 
 This plugins are to allow programmers to use DAP debugging functionality.
