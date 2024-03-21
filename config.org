@@ -22,7 +22,8 @@ This is a basic configuration, to be separated out into multiple source blocks l
 ** User Interface
 
 #+begin_src elisp
-  (global-display-line-numbers-mode 1)
+  (global-display-line-numbers-mode t)
+  (setq display-line-numbers-type 'visual)
 
   (setq use-dialog-box nil)
   (setq inhibit-startup-message t)
