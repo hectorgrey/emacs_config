@@ -23,13 +23,16 @@
 (scroll-bar-mode 0)
 (tool-bar-mode 0)
 (menu-bar-mode 0)
+(setq inhibit-splash-screen 1)
 
 (use-package vertico
   :init
   (vertico-mode))
 (use-package orderless)
 (use-package consult)
-(use-package marginalia)
+(use-package marginalia
+  :init
+  (marginalia-mode))
 (use-package embark-consult)
 (use-package embark)
 
