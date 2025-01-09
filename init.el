@@ -50,3 +50,7 @@
   :init
   (which-key-mode))
 (use-package magit)
+
+(use-package treesit-auto
+  :config
+  (global-treesit-auto-mode 1))
