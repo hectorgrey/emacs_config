@@ -25,6 +25,12 @@
 (menu-bar-mode 0)
 (setq inhibit-splash-screen 1)
 
+(use-package ace-window
+  :config
+  (global-set-key (kbd "C-x o") 'ace-window)
+  :init
+  (ace-window-display-mode 1))
+
 (use-package vertico
   :init
   (vertico-mode))
