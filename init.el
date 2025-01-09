@@ -20,6 +20,9 @@
   (straight-use-package-by-default t))
 
 (load-theme 'modus-vivendi)
+(scroll-bar-mode 0)
+(tool-bar-mode 0)
+(menu-bar-mode 0)
 
 (use-package vertico
   :init
@@ -36,7 +39,9 @@
   (corfu-auto t)
   :init
   (global-corfu-mode 1)
-  (corfu-echo-mode 1))
+  (corfu-echo-mode 1)
+  (corfu-popupinfo-mode 1))
+(use-package nerd-icons-corfu)
 
 (use-package cape)
 (use-package eglot)
