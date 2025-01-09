@@ -56,3 +56,6 @@
   (treesit-auto-install-all)
   :config
   (global-treesit-auto-mode 1))
+
+(use-package rust-mode)
+(use-package zig-mode)
