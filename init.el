@@ -33,8 +33,11 @@
 (use-package corfu
   :custom
   (corfu-cycle t)
+  (corfu-auto t)
   :init
-  (global-corfu-mode))
+  (global-corfu-mode 1)
+  (corfu-echo-mode 1))
+
 (use-package cape)
 (use-package eglot)
 
