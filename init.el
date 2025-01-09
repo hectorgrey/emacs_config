@@ -24,6 +24,7 @@
 (tool-bar-mode 0)
 (menu-bar-mode 0)
 (setq inhibit-splash-screen 1)
+(set-face-attribute 'default nil :height 140)
 
 (use-package ace-window
   :config
@@ -66,5 +67,6 @@
   :config
   (global-treesit-auto-mode 1))
 
+(use-package glsl-mode)
 (use-package rust-mode)
 (use-package zig-mode)
