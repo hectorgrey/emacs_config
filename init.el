@@ -52,5 +52,7 @@
 (use-package magit)
 
 (use-package treesit-auto
+  :custom
+  (treesit-auto-install-all)
   :config
   (global-treesit-auto-mode 1))
