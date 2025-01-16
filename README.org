@@ -12,6 +12,8 @@
 
 * Preamble
 
+This comment is to tell emacs to use lexical binding when reading this init file.
+
 #+begin_src emacs-lisp
   ;; -*- lexical-binding: t -*-
 #+end_src
@@ -101,6 +103,8 @@
     :init (add-hook 'org-mode-hook 'org-modern-mode))
   (use-package org-tempo
     :straight nil)
+  (use-package org-auto-tangle
+    :hook (org-mode . org-auto-tangle-mode))
 #+end_src
 
 * Programming
