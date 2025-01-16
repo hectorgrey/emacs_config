@@ -20,6 +20,9 @@ This comment is to tell emacs to use lexical binding when reading this init file
 
 * Package Management
 
+~straight.el~ is used here for for installing packages directly from their git repos and compiling natively on
+installations that support it.
+
 #+begin_src emacs-lisp
   (defvar bootstrap-version)
   (let ((bootstrap-file
