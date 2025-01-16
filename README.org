@@ -1,0 +1,4 @@
+#+Property: Header-args :tangle init.el
+#+auto_tangle: t
+#+AUTHOR: hectorgrey
+
