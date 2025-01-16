@@ -19,6 +19,8 @@
   :custom
   (straight-use-package-by-default t))
 
+(setq backup-directory-alist '((expand-file-name "backups" user-emacs-directory)))
+
 (load-theme 'modus-vivendi)
 (scroll-bar-mode 0)
 (tool-bar-mode 0)
@@ -32,7 +34,9 @@
   :init
   (ace-window-display-mode 1))
 
-(use-package evil)
+(use-package evil
+  :init
+  (evil-mode))
 
 (use-package vertico
   :init
