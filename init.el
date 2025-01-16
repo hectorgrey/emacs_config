@@ -19,7 +19,7 @@
   :custom
   (straight-use-package-by-default t))
 
-(setq backup-directory-alist '((expand-file-name "backups" user-emacs-directory)))
+(setq backup-inhibited t)
 
 (load-theme 'modus-vivendi)
 (scroll-bar-mode 0)
@@ -87,3 +87,5 @@
 (use-package glsl-mode)
 (use-package rust-mode)
 (use-package zig-mode)
+(use-package lua-mode)
+(use-package haskell-mode)
