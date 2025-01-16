@@ -58,14 +58,25 @@
   (corfu-echo-mode 1)
   (corfu-popupinfo-mode 1))
 (use-package nerd-icons-corfu)
+(use-package all-the-icons
+  :if (display-graphic-p))
 
 (use-package cape)
-(use-package eglot)
 
 (use-package which-key
   :init
   (which-key-mode))
 (use-package magit)
+
+(use-package toc-org
+  :commands toc-org-enable
+  :init (add-hook 'org-mode-hook 'toc-org-enable))
+(use-package org-modern
+  :init (add-hook 'org-mode-hook 'org-modern-mode))
+(use-package org-tempo
+  :straight nil)
+
+(use-package eglot)
 
 (use-package treesit-auto
   :custom
