@@ -32,6 +32,8 @@
   :init
   (ace-window-display-mode 1))
 
+(use-package evil)
+
 (use-package vertico
   :init
   (vertico-mode))
