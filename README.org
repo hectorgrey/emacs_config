@@ -115,7 +115,8 @@ installations that support it.
 #+begin_src emacs-lisp
   (use-package magit)
 
-  (use-package eglot)
+  (use-package eglot
+    :straight nil)
 
   (use-package treesit-auto
     :custom
