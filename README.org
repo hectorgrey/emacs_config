@@ -7,6 +7,8 @@
 - [[#preamble][Preamble]]
 - [[#package-management][Package Management]]
 - [[#user-interface][User Interface]]
+- [[#utilities][Utilities]]
+  - [[#irc][IRC]]
 - [[#text][Text]]
   - [[#org-mode][Org-mode]]
 - [[#programming][Programming]]
@@ -97,6 +99,21 @@ installations that support it.
     (which-key-mode))
 #+end_src
 
+* Utilities
+
+** IRC
+
+#+begin_src emacs-lisp
+    (use-package circe)
+    (setq circe-network-options
+	  '(("Libera Chat"
+	     :tls t
+	     :nick "hectorgrey"
+	     :sasl-username "hectorgrey"
+	     :sasl-password "B@ttleM@ge1337"
+	     )))
+#+end_src
+
 * Text
 
 #+begin_src emacs-lisp
@@ -138,3 +155,4 @@ installations that support it.
   (use-package lua-mode)
   (use-package haskell-mode)
 #+end_src
+> 
