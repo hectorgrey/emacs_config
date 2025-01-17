@@ -115,6 +115,7 @@ installations that support it.
     :straight nil)
   (use-package org-auto-tangle
     :hook (org-mode . org-auto-tangle-mode))
+  (add-hook 'org-mode-hook 'auto-fill-mode)
 #+end_src
 
 * Programming
