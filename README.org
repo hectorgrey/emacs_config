@@ -5,6 +5,7 @@
 
 * Contents :TOC:
 - [[#preamble][Preamble]]
+  - [[#lexical-binding][Lexical Binding]]
 - [[#package-management][Package Management]]
 - [[#user-interface][User Interface]]
 - [[#utilities][Utilities]]
@@ -14,6 +15,11 @@
 - [[#programming][Programming]]
 
 * Preamble
+
+This is a basic emacs config.  It may take a little while to run first time.  If you are unfamiliar with tangle in org
+mode, press ~C-c C-v t~ to create ~init.el~.
+
+** Lexical Binding
 
 This comment is to tell emacs to use lexical binding when reading this init file.
 
