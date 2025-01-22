@@ -123,6 +123,9 @@ installations that support it.
 ** Org-mode
 
 #+begin_src emacs-lisp
+  (use-package evil-org
+    :after org
+    :hook (org-mode . (lambda () evil-org-mode)))
   (use-package toc-org
     :commands toc-org-enable
     :init (add-hook 'org-mode-hook 'toc-org-enable))
@@ -154,5 +157,9 @@ installations that support it.
   (use-package zig-mode)
   (use-package lua-mode)
   (use-package haskell-mode)
+  (use-package dotnet)
+  (add-hook 'csharp-ts-mode 'dotnet-mode)
+
+  (setq-default c-basic-offset 8)
 #+end_src
 > 
